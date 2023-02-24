@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	
+	int t;
+	
+	cin>>t;
+	
+	while(t--)
+	{
+	    int n;
+	    
+	    cin>>n;
+	    int arr[n];
+	    
+	    int i=0;
+	    
+	    while(n--)
+	    {
+	        cin>>arr[i++];
+	    }
+	    
+	    sort(arr,arr+i);
+	    
+	    cout<<arr[1]<<endl;
+	    
+	}
+	return 0;
+}
