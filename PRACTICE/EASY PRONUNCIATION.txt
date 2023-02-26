@@ -1,0 +1,56 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+bool isConst(char ch)
+{
+    switch(ch)
+    {
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+                    return 0;
+                    break;
+        default: return 1;
+                    break;
+    }
+}
+
+int main() {
+	// your code goes here
+	
+	int t;
+	cin>>t;
+	
+	while(t--)
+	{
+	    int n;
+	    cin>>n;
+	    
+	    string s;
+	    cin>>s;
+	    int count =0;
+	    int flag=0;
+	    
+	    for(auto i:s)
+	    {
+	        if(isConst(i)==1)
+	        {
+	            count++;
+	            if(count>=4)
+	            {
+	                cout<<"no"<<endl;
+	                flag=1;
+	                break;
+	            }
+	        }
+            else
+                count=0;
+	    }
+	    
+	    if(flag==0)
+	        cout<<"yes"<<endl;
+	}
+	return 0;
+}
